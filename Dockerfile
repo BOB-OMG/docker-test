@@ -5,7 +5,8 @@
 
 FROM ubuntu:21.04
 
-#RUN apt-get -y update
+RUN add-apt-repository --remove ppa:webupd8team/ppa
+RUN apt-get -y update
 RUN apt-get -y install apache2
 
 RUN echo 'Docker Image on CloudRun of Denis Astahov!<br>'   > /var/www/html/index.html
